@@ -58,3 +58,23 @@ async function RogerStats(){
   document.getElementById('squadWins2').textContent = squadWins;
 }
 RogerStats();
+
+const pacoStats = 'https://fortnite-api.com/v1/stats/br/v2/c7e3906693de4007860b0deefd6cacf5'
+async function PacoStats(){
+  const response = await fetch(pacoStats);
+  const res = await response.json();
+  //console.log(res.data.account.name);
+
+  //********SoloStats********
+  const soloWins = res.data.stats.all.solo.wins;
+  document.getElementById('soloWins3').textContent = soloWins;
+  
+  //********DuosStats********
+  const duoWins = res.data.stats.all.duo.wins;
+  document.getElementById('duoWins3').textContent = duoWins;
+
+  //********SquadStats********
+  const squadWins = res.data.stats.all.squad.wins;
+  document.getElementById('squadWins3').textContent = squadWins;
+}
+PacoStats();
