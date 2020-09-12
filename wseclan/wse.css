@@ -32,11 +32,7 @@ nav{background-color:#272c38;}
 }
 
 .brand-logo{margin-left:.5em;}
-.img{width:100%;}
+/* .img{width:100%;} */
 .page-footer{background-color:#272c38;}
 .ig-icon{margin-right: 1em;}
 video{margin-bottom:4em; width:50em;}
-
-.imgcover{
-    src: url(https://wseclan.web.app/img/991303.jpg);
-}
