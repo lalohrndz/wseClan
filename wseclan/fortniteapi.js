@@ -3,7 +3,6 @@ async function LaloStats(){
   const response = await fetch(laloStats);
   const res = await response.json();
   //console.log(res.data.account.name);
-  console.log(res.data);
 
   //********SoloStats********
   const soloWins = res.data.stats.all.solo.wins;
@@ -45,8 +44,8 @@ PargaStats();
 ******************************
 SIGUE PENDIENTE SU EPIC-ID
 ******************************
-
-const rogerStats = 'https://fortnite-api.com/v1/stats/br/v2/'
+*/
+const rogerStats = 'https://fortnite-api.com/v1/stats/br/v2/611190b975de48b293b91ace4047b68e'
 async function RogerStats(){
   const response = await fetch(rogerStats);
   const res = await response.json();
@@ -65,7 +64,7 @@ async function RogerStats(){
   document.getElementById('squadWins2').textContent = squadWins;
 }
 RogerStats();
-*/
+
 
 const pacoStats = 'https://fortnite-api.com/v1/stats/br/v2/c7e3906693de4007860b0deefd6cacf5'
 async function PacoStats(){
@@ -86,3 +85,23 @@ async function PacoStats(){
   document.getElementById('squadWins3').textContent = squadWins;
 }
 PacoStats();
+
+const zorzaStats = 'https://fortnite-api.com/v1/stats/br/v2/b3daf186270944b9b87ebdda04f563c2'
+async function ZorzaStats(){
+  const response = await fetch(zorzaStats);
+  const res = await response.json();
+  //console.log(res.data.account.name);
+
+  //********SoloStats********
+  const soloWins = res.data.stats.all.solo.wins;
+  document.getElementById('soloWins4').textContent = soloWins;
+  
+  //********DuosStats********
+  const duoWins = res.data.stats.all.duo.wins;
+  document.getElementById('duoWins4').textContent = duoWins;
+
+  //********SquadStats********
+  const squadWins = res.data.stats.all.squad.wins;
+  document.getElementById('squadWins4').textContent = squadWins;
+}
+ZorzaStats();
